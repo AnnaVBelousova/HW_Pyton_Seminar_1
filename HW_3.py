@@ -7,10 +7,9 @@
 # Введите число n: 3
 # n + nn + nnn = 369
 
-print("Введите число n:")
-n = int(input())
+n = (int(input("Введите число n:")))
+
 num2 = n*10 + n
-print(num2)
 num3 = n*100+n*10+n
 result = n + num2 + num3
-print(result)
+print( f"сумма чисел n + nn + nnn = {result} ")

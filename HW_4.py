@@ -17,22 +17,21 @@
 # Введите численность сотрудников фирмы: 10
 # Прибыль фирмы в расчете на одного сотрудника = 50.0
 
-print('Введите выручку фирмы:')
-revenue = int(input())
-print('Введите издержки фирмы:')
-costs = int(input())
+
+revenue = int(input('Введите выручку фирмы:'))
+costs = int(input('Введите издержки фирмы:'))
 profit = revenue - costs
 if profit<0:
     print ("Финансовый результат - убыток")
-else: profit>0
-answer = f'Финансовый результат - прибыль. Ее величина: {profit}' 
-print(answer)
 
-profitability = profit/revenue
-answer3 =f"Рентабельность выручки ={profitability}"
-print(answer3)
-print ("Введите численность сотрудников фирмы: ")
-number_of_workers = int(input())
-profit_for_one_worker = profit/number_of_workers
-answer2 = f'Прибыль фирмы в расчете на одного сотрудника = {profit_for_one_worker}'
-print(answer2)
+elif profit>0:
+    print (f'Финансовый результат - прибыль. Ее величина: {profit}') 
+    profitability = round(profit/revenue,1)
+    
+    print (f"Рентабельность выручки ={profitability}")
+else:  
+    print("Финансовый результат - точка безубыточности")
+number_of_workers = int(input("Введите численность сотрудников фирмы: "))
+profit_for_one_worker = round(profit/number_of_workers,1)
+
+print (f'Прибыль фирмы в расчете на одного сотрудника = {profit_for_one_worker}')
